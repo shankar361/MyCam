@@ -9,8 +9,8 @@ with col1[0]:
     if st.button("Login"):
         if uname == "shankar" and pswd=="shan":
             st.header("Login success")
-        #    enabl=st.checkbox("Enable Camera?")
-            dat11 = st.camera_input("Your webcame",disabled= False)
+            enabl=st.checkbox("Enable Camera?")
+            dat11 = st.camera_input("Your webcame",disabled= not enabl)
             st.write("You clicked below picture")
             if dat11 is not None:
                 st.image(dat11)
